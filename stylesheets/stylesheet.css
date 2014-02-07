@@ -147,7 +147,17 @@ header .social {
   right: 0;
   top: 0;	
 }
-.si-github {
+.si-icon {
+	display: inline-block;
+	height: 64px;
+	width: 64px;
+	background-size: 64px 64px;
+	background-position: center center;
+	background-repeat: no-repeat;
+	margin: 5px;
+	text-indent: -9999em;
+}
+.si-icon.github {
   background-color: #4183c4;
   background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAADKklEQVR42u3aTUgUYQCH8bFISyMT2/zaMjpFRWESZCQrFgQVS2aaIVl0LNKLEHixgyVSFIGHvjzkMSiKvOT2cSi2wJIOJUVZEZilku5S2mplz0FhWOYdZ3Pnndl6//A7qXN4mJ1dd0abnJz8r6kAKoAKoAKoACqACqACqAAqgAogxRIUoRr1ODGlHtUogudfC5CPWnRiEDNtCAHUIT+RA6zBZYTwtwujDWsTKUAamjGKeG0MLVjo9gAF6IZde45CtwbwIwS7F8ZutwUoxwRk7Scq3RLAhx+QvQhKnQ6Qh0+IXi+CGMFsF0IQvYjeZyxzMsAtGG2bLtAxvEGse4s6eKGhFEbrcCpAOYwWNvg0twgn0YFGVMGHwik+7EMjOtCMxdB0Mk3OqErZAVLQA6O9Rwq0OJuHXhjtNeZLDEBx8fqQakOABfgI0fbLDHAXZltny0dr8z2QFWAFIhDtA/JsCJCDdxBtHCtlBDgIs+2AZpPtMNthGQEuQrQn0GwWhGhtMgI8gmgNEgIch2iPbQ4w9VYknl9CgF1g4rdgOwOkYwCibZUQoASiDSHDzgCZ+Gr5Aij/QjgCj5NnwCEJAWqsnwHyrwFnJARoce4aADyEaM8kBOiCaEF5nwPE2wTNJhvxG6JdkRGgBma7b2OAgBs+CeYjArOdlvXal/+/ABDATGuHF9oseXEVzMKZJylABfRrhR/XoN8AzqJY9w1PkuCY+p9lwIdzGISVVckMkIyXUTcsCqChFkbrRyeyoAlk4R6+IJa9Qoq8AMAe6DeGzdDQDqO1WjjuecS6Cqe+Fb4J/V4gGem4g+htgGaO34ltt538WjwXfdCvHBrmogxNaEAJ5lg4Zja+wcr64XUuAFCMMUyvBxmzOJ7H4g2VCErccm+wDOOYXhe2IElwlTezFCGYbQJ73XZ3eCeGDW5n38B1BOCJQ4AQ/G59PmA9nsJov5Br4RhZCMNo3Shw+xMiqWgyuJCNWrxg5Rj87XecQloiPSO0ChcwrDsDsi2+BCZ03/BcwupEfkrMiyOosfg2mIQDOIrl6kFJFUAFUAFUABVABVABVAAVQAVQAezwB0WFfpUw1et7AAAAAElFTkSuQmCC);
 }

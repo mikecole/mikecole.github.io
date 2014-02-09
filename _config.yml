@@ -1,3 +1,5 @@
 name: blog
 markdown: redcarpet
 pygments: true
+exclude:
+  - CNAME

@@ -54,9 +54,20 @@ excerpt: "The 2014 edition of BarCamp Cedar Valley was here and gone. Here are m
 	In my talk I mentioned a great presentation by <a href="https://twitter.com/housecor" target="_blank">Cory House</a> from
 	<a href="http://www.iowacodecamp.com/" target="_blank">Iowa Code Camp</a> on being an outlier in your career. After seeing this
 	presentation I was definitely inspired to shake myself out the negative funk I was currently in. Just this week
-	I saw that he's developing a video training session on the same topic for
+	I saw that Cory is developing a video training session on the same topic for
 	<a href="http://pluralsight.com/training/" target="_blank">Pluralsight</a> due to be released in April, so I recommend keeping your
 	eyes on that.
+</p>
+<h2>Takeaways</h2>
+<p>
+	As mentioned before, I'm going to try doing a brain dump to a list at the end of each workday. I'm hoping this cuts down on me sitting
+	around worrying at nights about impending deadlines, challenges, or other work-related stress. I also learned about a new area user group:
+	<a href="https://www.facebook.com/groups/CedarValleyMakers/" target="_blank">Cedar Valley Makers.</a> I need to check out a meeting sometime.
+</p>
+<p>
+	I was very please to learn that <a href="https://twitter.com/kevin_s" target="_blank">Kevin Shannon</a> was working on a charity hackathon
+	in the Des Moines area. I shared some ideas from our <a href="http://a.pgtb.me/65Z6Qb" target="_blank">Operation: Make A Difference</a>
+	initiative at work. I hope what he's planning works out for my schedule because I'd definitely like to participate.
 </p>
 <h2>Summary</h2>
 <p>

@@ -1,11 +1,10 @@
 ---
-layout: default
+layout: post
 title: "2014 BarCampCV"
 date: 2014-02-09
 tags: [BarCampCV, User Groups, Cedar Valley]
 excerpt: "The 2014 edition of BarCamp Cedar Valley was here and gone. Here are my thoughts on the event, my talk, and helping coordinate another successful BarCamp."
 ---
-<h1>2014 BarCampCV</h1>
 <p>
 	BarCamp Cedar Valley was February 1 at the UNI campus. This was the third event we've put on and was by far my favorite. If you haven't
 	attended a BarCamp and are interested, I would recommend following <a href="https://twitter.com/barcampcv" target="_blank">our Twitter account</a> to keep up

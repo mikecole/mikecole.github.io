@@ -1,9 +1,12 @@
 ---
 layout: default
-title: Mike Cole's Blog
+title: Blog
 ---
 
 {% for post in site.posts %}
 <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-<i><span>{{ post.date | date_to_string }}</i>
+<i><span>{{ post.date  | date: "%m/%d/%Y" }}</i>
+<p>
+	{{ post.excerpt }}
+</p>
 {% endfor %}

@@ -9,5 +9,5 @@ title: Blog
 <p>
 	{{ post.excerpt }} <a href="{{ post.url }}">Check It Out --></a>
 </p>
-<strong>Tags: </strong> {{ page.tags | array_to_sentence_string }}
+<strong>Tags: </strong> {{ post.tags | array_to_sentence_string }}
 {% endfor %}

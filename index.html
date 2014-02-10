@@ -7,7 +7,7 @@ title: Blog
 <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
 <i><span>{{ post.date | date: "%m/%d/%Y" }}</i>
 <p>
-	{{ post.excerpt }} <a href="{{ post.url }}">Check It Out --></a>
+	{{ post.excerpt }} <a href="{{ post.url }}">Check It Out →</a>
+	<strong>Tags:</strong> {{ post.tags | array_to_sentence_string }}
 </p>
-<strong>Tags: </strong> {{ post.tags | array_to_sentence_string }}
 {% endfor %}

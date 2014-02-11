@@ -57,10 +57,10 @@ body {
 }
 
 a {
-  color: #2879d0;
+  color: #2268b2;
 }
 a:hover {
-  color: #2268b2;
+  color: #1A4F82;
 }
 
 header {
@@ -202,7 +202,7 @@ pre {
   border: solid 1px #f2f2f2;
 }
 pre code {
-  color: #2879d0;
+  color: #2268b2;
   background-color: #fff;
   border: none;
   padding: 0;
@@ -460,7 +460,7 @@ footer a:hover {
     font-size: 13px;
     line-height: 1;
     background-color: #9ddcff;
-    color: #2879d0;
+    color: #2268b2;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;                     
     border-radius: 5px;    

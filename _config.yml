@@ -1,5 +1,6 @@
 name: blog
 markdown: redcarpet
 pygments: true
+permalink: pretty
 exclude:
   - CNAME

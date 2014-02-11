@@ -6,7 +6,7 @@ tags: [BarCampCV, User Groups, Cedar Valley]
 excerpt: |
   The 2014 edition of BarCamp Cedar Valley was here and gone. Here are my thoughts on the event, my talk, and helping coordinate
   another successful BarCamp.
-meta-description: |
+metaDescription: |
   The 2014 edition of BarCamp Cedar Valley was here and gone. Here are my thoughts on the event, my talk, and helping coordinate
   another successful BarCamp.
 ---

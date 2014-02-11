@@ -3,7 +3,12 @@ layout: post
 title: "2014 BarCampCV"
 date: 2014-02-09
 tags: [BarCampCV, User Groups, Cedar Valley]
-excerpt: "The 2014 edition of BarCamp Cedar Valley was here and gone. Here are my thoughts on the event, my talk, and helping coordinate another successful BarCamp."
+excerpt: |
+  The 2014 edition of BarCamp Cedar Valley was here and gone. Here are my thoughts on the event, my talk, and helping coordinate
+  another successful BarCamp.
+meta-description: |
+  The 2014 edition of BarCamp Cedar Valley was here and gone. Here are my thoughts on the event, my talk, and helping coordinate
+  another successful BarCamp.
 ---
 <article itemscope itemtype="http://schema.org/BlogPosting">
 <p>

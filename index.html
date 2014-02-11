@@ -4,15 +4,15 @@ title: Blog
 meta-description: Mike Cole&#39;s Blog features information about Mike Cole, blog posts about .NET development, web development, and random thoughts.
 ---
 
-<section itemscope itemtype="http://schema.org/Blog">
-  {% for post in site.posts %}
-  <article class="post" itemprop="blogPosts" itemscope itemtype="http://schema.org/BlogPosting">
-    <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-    <i><span>{{ post.date | date: "%m/%d/%Y" }}</i>
-    <p>
-      {{ post.excerpt }} <a href="{{ post.url }}">Check It Out →</a>
-      <br /><b>Tags:</b> {{ post.tags | array_to_sentence_string }}
-    </p>
-  </article>
-  {% endfor %}
-</section>
+                    <section itemscope itemtype="http://schema.org/Blog">
+                        {% for post in site.posts %}
+                        <article class="post" itemprop="blogPosts" itemscope itemtype="http://schema.org/BlogPosting">
+                            <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+                            <i><span>{{ post.date | date: "%m/%d/%Y" }}</i>
+                            <p>
+                                {{ post.excerpt }} <a href="{{ post.url }}">Check It Out →</a>
+                                <br /><b>Tags:</b> {{ post.tags | array_to_sentence_string }}
+                                </p>
+                        </article>
+                        {% endfor %}
+                    </section>

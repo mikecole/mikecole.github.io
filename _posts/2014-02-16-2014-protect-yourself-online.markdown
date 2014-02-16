@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Protect Yourself Online"
-date: 2014-02-15
+title: Protect Yourself Online
+date: 2014-02-16
 tags: [Security]
 excerpt: |
   Another day, another security breach. Today Kickstarter announced that hackers obtained unauthorized access to customer data.
@@ -22,11 +22,11 @@ Remembering several different passwords is a hassle, so it's usually easiest to 
 Even if you have different variations (MyP@ssword1, MyP@ssword2, MyP@ssword3, etc.) this is a horrible idea. If one online service
 is compromised then hackers might obtain access to several of your accounts. To make it worse, many login names now simply use the
 email address. Did you use the same password with your Kickstarter account that you use with your email account? Is your Kickstarter
-user name whatever@gmail.com? See where I'm going?
+username whatever@gmail.com? See where I'm going?
 </p>
 <p>
 It gets even worse when you share passwords between work and personal systems. Sign up for some podunky online service that used
-terrible security practices and got hacked? Now some shady people might possibly have your work webmail password, your CRM system
+terrible security practices and get hacked? Now some shady people might possibly have your work webmail password, your CRM system
 password, your website administrator password, or even your VPN password. You can probably expect some classy porn pics smack dab
 on your company's website.
 </p>
@@ -37,22 +37,21 @@ special character, one uppercase letter, and one number? Good luck with that.
 </p>
 <h4>Never Changing Passwords</h4>
 <p>
-When I first started following better security practices, I noticed that my GMail password hadn't changed since I created it several
+When I first started following better security practices, I noticed that my Gmail password hadn't changed since I created it several
 years ago. That's ridiculous. It wasn't a complex password, either. I was really lucky that no harm came from that. There's an upcoming
 story of somebody that wasn't so lucky.
 </p>
 <h3>The Most Hated Man On The Internet - A Case Study On Reckless Web Usage</h3>
 <p>
-Several months ago I noticed a link on my Twitter feed with the title "Most Hated Man On The Internet." Thinking I was famous,
+Several months ago I noticed a link on my Twitter feed with the title "Most Hated Man On The Internet." Thinking sombody was talking about me,
 I clicked the link and read a story that made me sick. Here's a link: <a href="http://www.rollingstone.com/culture/news/the-most-hated-man-on-the-internet-20121113" target="_blank">
 Hunter Moore: The Most Hated Man on the Internet</a>
 </p>
 <p>
 <a href="http://en.wikipedia.org/wiki/Wikipedia:Too_long;_didn't_read" target="_blank">tl;dr</a> version: A young adult female didn't
-use common sense and somehow had a nude picture of herself saved in her email. Somehow (she presumably followed some of the bad
+use common sense and had a nude picture of herself saved in her email. Somehow (she presumably followed some of the bad
 habits listed above) her email account was compromised and the picture appeared on a Revenge Porn website along with her name,
-address, link to her Facebook profile, and employer information. How would you like it if this was you, a family member, or even
-a child?
+address, link to her Facebook profile, and employer information. How would you like it if this was you or a family member?
 </p>
 <h3>Conventional Online Wisdom No Longer Applies</h3>
 <p>
@@ -62,16 +61,16 @@ How can you protect yourself? Here's a few guidelines you can follow:
 <p>
 I am not an expert and this blog post should only be considered a call to action instead of a definitive guide. Find an expert
 online and follow their lead. My expert of choice is <a href="https://twitter.com/troyhunt" target="_blank">Troy Hunt</a>. Follow
-him on Twitter, read his blog, and do what he says. A lot of the stuff he explains on his blog is confusing to even an IT
+him on Twitter, read his blog, and do what he says. A lot of the stuff he explains on his blog is confusing even to an IT
 professional like me, but if you can gleam a general understanding of what he's talking about then you will be better off.
 </p>
 <h4>Use Common Sense</h4>
 <p>
 As mentioned in the story above, a person saved a nude picture of herself on her webmail account. Come on. Everything you put
-on the web is now public information and you can never get rid of it. Everything you say, everything you post on Twitter, every
+on the web is public information and you can never get rid of it. Everything you say, everything you post on Twitter, every
 email you send is now fair game. Post wisely.
 </p>
-<h4>Use A Password Manager</h4>
+<h4>Use Password Management Software</h4>
 <p>
 This is a big one and it's probably going to cost you a little money. The best case scenario with password complexity is having
 a password so complex that there's no way you can possibly memorize it. All of my passwords are similar to the following:
@@ -80,11 +79,11 @@ of paper taped to my monitor.
 </p>
 <p>
 There are a lot of password managers out there that claim to be the most secure, but how can you be sure? Following the
-recommendation of my expert Troy Hunt, I use <a href="https://agilebits.com/onepassword" target="_blank">1Password</a>.
-It was a little tough swallowing the fact that I was going to have to drop some hard earned cash on it, but it had several
-great features, was highly recommended, and has mobile apps. The Windows version is a little rough at the moment, but a new
+recommendation of expert Troy Hunt, I use <a href="https://agilebits.com/onepassword" target="_blank">1Password</a>.
+It was a little tough swallowing the fact that I was going to have to drop some hard earned cash on it, but it has several
+great features, was highly recommended, and has mobile apps. The Windows version is a little rough at the moment but a new
 version is going to be release soon. I was told that if I bought now that I would obtain the new version when it was released,
-but I would urge you to contact their support and get the same assurance personally. I'm not even going to go into the features
+but I would urge you to contact their support and get the same assurance personally. I'm not going to go into the features
 and how I use it as their <a href="http://help.agilebits.com/1Password_Windows/index.html" target="_blank">documentation</a>
 is superb. Try their 30 day trial; you won't want to stop using it.
 </p>
@@ -105,7 +104,7 @@ Here are some other recommendations I routinely hear mentioned:
 <p>
 If you use password management software like I recommended above, this is probably a moot point because you're presumably
 generating very complex passwords. If you're not, you shouldn't put your trust in those little funky gauges telling you that
-your password is secure enough <i>in their opinion</i>. Would you trust a random stranger to analyze your home security?
+your password is secure enough <em>in their opinion</em>. Would you trust a random stranger to analyze your home security?
 </p>
 <h4>Use haveibeenpwned.com</h4>
 <p>
@@ -120,9 +119,9 @@ Do research on the credit card you use and ensure they have ample safeguards aga
 </p>
 <h4>Demand Safe Practices</h4>
 <p>
-After I started using a password manager I was surprised at the number of websites that limit the max character length of passwords.
-The developer in me questions their password hashing process if they care about password length. If you run into this on
-a company's website, push the issue in public on Twitter.
+After I started using a password manager I was surprised at the number of websites that limit the max character length of passwords
+to anything below 50 characters. The developer in me questions their password hashing process if they care about password length. If
+you run into this on a company's website, push the issue publicly on Twitter.
 </p>
 <p>
 Some websites even limit the special characters you can use in a password. This is ridiculous and downright reckless on their part.
@@ -133,11 +132,11 @@ certain special characters in your password. On a website dedicated to security.
 <p>
 Also, under no circumstances should a Forgot Your Password function ever provide you with your current password. It should
 always, always, always force you to change it to a new password. If a website can provide you with your current password, it means
-they are not storing it in a secure way. Call them out in public on Twitter. Money talks - take your money elsewhere.
+they are not storing it in a secure way. Call them out in public on Twitter. Money talks - take your business elsewhere if necessary.
 </p>
 <h3>Summary</h3>
 <p>
-Hackers are always looking for the easiest targets. If they need to spend too much time on you, they will move along to the next
-person. A few safeguards can make you infinitely more secure on the internet. Have any questions or suggestions? Post them below.
-Like I mentioned, I'm not security expert but I can try to get you pointed in the right direction.
+Hackers are always looking for the easiest targets. If they need to spend too much time on you they will more than likely move
+along to the next person. A few safeguards can make you infinitely more secure on the internet. Have any questions or suggestions?
+Post them below. Like I mentioned, I'm not security expert but I can try to get you pointed in the right direction.
 </p>

@@ -8,7 +8,6 @@ excerpt: |
   another successful BarCamp.
 meta-description: The 2014 edition of BarCamp Cedar Valley was here and gone. Here are my thoughts on the event, my talk, and helping coordinate another successful BarCamp.
 ---
-<article itemscope itemtype="http://schema.org/BlogPosting">
 <p>
 	BarCamp Cedar Valley was February 1 at the UNI campus. This was the third event we've put on and was by far my favorite. If you haven't
 	attended a BarCamp and are interested, I would recommend following <a href="https://twitter.com/barcampcv" target="_blank">our Twitter account</a> to keep up
@@ -84,4 +83,3 @@ meta-description: The 2014 edition of BarCamp Cedar Valley was here and gone. He
 	you'd like any info on BarCamp or are interested in helping coordinate, sponsor, or speak at a future BarCamp I encourage you to
 	reach out for information.
 </p>
-</article>

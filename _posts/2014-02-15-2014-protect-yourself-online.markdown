@@ -6,7 +6,7 @@ tags: [Security]
 excerpt: |
   Another day, another security breach. Today Kickstarter announced that hackers obtained unauthorized access to customer data.
   Are you watching your e-butt in this era of identity theft and shady internet practices? This will give you an intro to
-  things that you are probably doing wrong and get you set on the right path to being safer on the web.
+  things that you are probably doing wrong and get you set on the path to being safer on the web.
 meta-description: Protect Yourself Online - An intro to things that you are probably doing wrong and info to get you set on the right path to being safer on the web.
 ---
 <p>
@@ -15,8 +15,8 @@ that hackers obtained unauthorized access to customer data</a>. No credit card i
 were taken and sometimes that can be worse. I can probably speak for a segment of identity theft victims by saying I'm fairly sure
 they wish the damage inflicted was only a temporary trivial financial setback.
 </p>
-<h2>Here's What You're Probably Doing Wrong</h2>
-<h3>Sharing Passwords</h3>
+<h3>Here's What You're Probably Doing Wrong</h3>
+<h4>Sharing Passwords</h4>
 <p>
 Remembering several different passwords is a hassle, so it's usually easiest to share the same password amongst several accounts.
 Even if you have different variations (MyP@ssword1, MyP@ssword2, MyP@ssword3, etc.) this is a horrible idea. If one online service
@@ -30,18 +30,18 @@ terrible security practices and got hacked? Now some shady people might possibly
 password, your website administrator password, or even your VPN password. You can probably expect some classy porn pics smack dab
 on your company's website.
 </p>
-<h3>Simple Passwords</h3>
+<h4>Simple Passwords</h4>
 <p>
 Today's computers are incredibly powerful so encryption today doesn't mean what it once did. Have a password with only one
 special character, one uppercase letter, and one number? Good luck with that.
 </p>
-<h3>Never Changing Passwords</h3>
+<h4>Never Changing Passwords</h4>
 <p>
 When I first started following better security practices, I noticed that my GMail password hadn't changed since I created it several
 years ago. That's ridiculous. It wasn't a complex password, either. I was really lucky that no harm came from that. There's an upcoming
 story of somebody that wasn't so lucky.
 </p>
-<h2>The Most Hated Man On The Internet - A Case Study On Reckless Web Usage</h2>
+<h3>The Most Hated Man On The Internet - A Case Study On Reckless Web Usage</h3>
 <p>
 Several months ago I noticed a link on my Twitter feed with the title "Most Hated Man On The Internet." Thinking I was famous,
 I clicked the link and read a story that made me sick. Here's a link: <a href="http://www.rollingstone.com/culture/news/the-most-hated-man-on-the-internet-20121113" target="_blank">
@@ -54,24 +54,24 @@ habits listed above) her email account was compromised and the picture appeared 
 address, link to her Facebook profile, and employer information. How would you like it if this was you, a family member, or even
 a child?
 </p>
-<h2>Conventional Online Wisdom No Longer Applies</h2>
+<h3>Conventional Online Wisdom No Longer Applies</h3>
 <p>
 How can you protect yourself? Here's a few guidelines you can follow:
 </p>
-<h3>Keep Informed</h3>
+<h4>Keep Informed</h4>
 <p>
 I am not an expert and this blog post should only be considered a call to action instead of a definitive guide. Find an expert
 online and follow their lead. My expert of choice is <a href="https://twitter.com/troyhunt" target="_blank">Troy Hunt</a>. Follow
 him on Twitter, read his blog, and do what he says. A lot of the stuff he explains on his blog is confusing to even an IT
 professional like me, but if you can gleam a general understanding of what he's talking about then you will be better off.
 </p>
-<h3>Use Common Sense</h3>
+<h4>Use Common Sense</h4>
 <p>
 As mentioned in the story above, a person saved a nude picture of herself on her webmail account. Come on. Everything you put
 on the web is now public information and you can never get rid of it. Everything you say, everything you post on Twitter, every
 email you send is now fair game. Post wisely.
 </p>
-<h3>Use A Password Manager</h3>
+<h4>Use A Password Manager</h4>
 <p>
 This is a big one and it's probably going to cost you a little money. The best case scenario with password complexity is having
 a password so complex that there's no way you can possibly memorize it. All of my passwords are similar to the following:
@@ -101,24 +101,24 @@ Here are some other recommendations I routinely hear mentioned:
 <li><a href="https://www.passpack.com/" target="_blank">Passpack</a></li>
 </ul>
 </p>
-<h3>Don't Trust Password Strength Meters</h3>
+<h4>Don't Trust Password Strength Meters</h4>
 <p>
 If you use password management software like I recommended above, this is probably a moot point because you're presumably
 generating very complex passwords. If you're not, you shouldn't put your trust in those little funky gauges telling you that
 your password is secure enough <i>in their opinion</i>. Would you trust a random stranger to analyze your home security?
 </p>
-<h3>Use haveibeenpwned.com/</h3>
+<h4>Use haveibeenpwned.com</h4>
 <p>
 <a href="https://haveibeenpwned.com/" target="_blank">Use it</a>. Love it. Sign up for notifications. Tell your employer to
 sign up for domain wide notifications. And thank <a href="https://twitter.com/troyhunt" target="_blank">Troy Hunt</a> on
 Twitter for building it and making it available for free.
 </p>
-<h3>Use Credit Cards Only Online</h3>
+<h4>Use Credit Cards Only Online</h4>
 <p>
 Do not use debit cards online. They do not provide the level of support and protection as the big credit card companies.
 Do research on the credit card you use and ensure they have ample safeguards against stolen credit card numbers.
 </p>
-<h3>Demand Safe Practices</h3>
+<h4>Demand Safe Practices</h4>
 <p>
 After I started using a password manager I was surprised at the number of websites that limit the max character length of passwords.
 The developer in me questions their password hashing process if they care about password length. If you run into this on
@@ -135,7 +135,7 @@ Also, under no circumstances should a Forgot Your Password function ever provide
 always, always, always force you to change it to a new password. If a website can provide you with your current password, it means
 they are not storing it in a secure way. Call them out in public on Twitter. Money talks - take your money elsewhere.
 </p>
-<h2>Summary</h2>
+<h3>Summary</h3>
 <p>
 Hackers are always looking for the easiest targets. If they need to spend too much time on you, they will move along to the next
 person. A few safeguards can make you infinitely more secure on the internet. Have any questions or suggestions? Post them below.

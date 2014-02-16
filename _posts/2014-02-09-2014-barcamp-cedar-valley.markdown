@@ -14,7 +14,7 @@ meta-description: The 2014 edition of BarCamp Cedar Valley was here and gone. He
 	with the latest information. If you curious about what BarCamp is all about, I would suggest reading
 	<a href="http://barcampcv.com/Home/About" target="blank">What Is Barcamp?</a> from our website.
 </p>
-<h2>Planning The Event</h2>
+<h3>Planning The Event</h3>
 <p>
 	I'm lucky to be part of a great leadership group that helps plan this event. Like I mentioned, this was our third event so we've worked
 	out a lot of the kinks. We didn't have any locked door, no lights, or lost reservation incidents like previous BarCamps. One of the things
@@ -45,7 +45,7 @@ meta-description: The 2014 edition of BarCamp Cedar Valley was here and gone. He
 	capitalize on everybody's cabin fever. We definitely made the right choice as we had over 60 attendees even in the poor weather
 	conditions. I think we're planning on maintaining a yearly event every February.
 </p>
-<h2>My Talk: Recharging Your Battery - Avoiding Tech Burnout</h2>
+<h3>My Talk: Recharging Your Battery - Avoiding Tech Burnout</h3>
 <p>
 	Since the tech track was slow to fill, I decided to do a talk about burnout as I was currently feeling a little burnt out. It was the first
 	talk of the day and there was a great crowd. I led with things I do to recharge my battery, including charity work, working with the
@@ -61,7 +61,7 @@ meta-description: The 2014 edition of BarCamp Cedar Valley was here and gone. He
 	<a href="http://pluralsight.com/training/" target="_blank">Pluralsight</a> due to be released in April, so I recommend keeping your
 	eyes on that.
 </p>
-<h2>Takeaways</h2>
+<h3>Takeaways</h3>
 <p>
 	As mentioned before, I'm going to try doing a brain dump to a list at the end of each workday. I'm hoping this cuts down on me sitting
 	around worrying at nights about impending deadlines, challenges, or other work-related stress. I also learned about a new area user group:
@@ -72,7 +72,7 @@ meta-description: The 2014 edition of BarCamp Cedar Valley was here and gone. He
 	in the Des Moines area. I shared some ideas from our <a href="http://a.pgtb.me/65Z6Qb" target="_blank">Operation: Make A Difference</a>
 	initiative at work. I hope what he's planning works out for my schedule because I'd definitely like to participate.
 </p>
-<h2>Summary</h2>
+<h3>Summary</h3>
 <p>
 	I'm not sure exactly why, but this BarCamp was my favorite so far. I was lucky to meet Kyoger people
 	<a href="https://twitter.com/trevorcarlson4" target="_blank">Trevor Carlson</a> and

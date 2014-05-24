@@ -2,7 +2,7 @@
 layout: post
 title: Summer 2014 Speaking Dates
 date: 2014-05-23
-tags: [Community]
+tags: [User Groups, Cedar Valley]
 excerpt: |
   I'm presenting on Entity Framework for a few dates this summer. Check out my schedule and details.
 meta-description: I'm presenting on Entity Framework for a few dates this summer. Check out my schedule and details.

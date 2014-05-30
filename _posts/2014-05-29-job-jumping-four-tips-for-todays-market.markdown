@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Outlier Developer - Job Jumping&#58; 4 Tips for Today's Market
+title: "Outlier Developer - Job Jumping: 4 Tips for Today's Market"
 date: 2014-05-28
 tags: [Career]
 excerpt: |

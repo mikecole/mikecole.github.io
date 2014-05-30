@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Job Jumping: 4 Tips for Today's Market
+title: Job Jumping - 4 Tips for Today's Market
 date: 2014-05-28
-tags: [User Groups, Cedar Valley]
+tags: [Career]
 excerpt: |
   I'm presenting on Entity Framework for a few dates this summer. Check out my schedule and details.
 meta-description: I'm presenting on Entity Framework for a few dates this summer. Check out my schedule and details.

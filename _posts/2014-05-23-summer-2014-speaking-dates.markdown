@@ -2,6 +2,7 @@
 layout: post
 title: Summer 2014 Speaking Dates
 date: 2014-05-23
+redirect_from: "/2014/05/23/2014-summer-2014-speaking-dates/"
 tags: [User Groups, Cedar Valley]
 excerpt: |
   I'm presenting on Entity Framework for a few dates this summer. Check out my schedule and details.

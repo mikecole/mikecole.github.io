@@ -2,6 +2,7 @@
 layout: post
 title: Protect Yourself Online
 date: 2014-02-16
+redirect_from: "/2014/02/16/2014-protect-yourself-online/"
 tags: [Security]
 excerpt: |
   Another day, another security breach. Today Kickstarter announced that hackers obtained unauthorized access to customer data.

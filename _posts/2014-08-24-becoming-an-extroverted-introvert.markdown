@@ -32,7 +32,7 @@ We have a yearly BarCampCV event in Cedar Falls and I always try to do an improm
 </p>
 <h3>Take Advantage of Flexible Work Schedule</h3>
 <p>
-I decided to work from home regularly to limit my distractions. I'm more comfortable sitting in my dark basement working (didn't I just make fun of this?) than in a hide open office with lots of distractions. I'm also able to break up my day into a few 2-3 hour work sprints to keep energized. I'm a lot more productive after 8 PM than I am mid-day and I want to take advantage of that.
+I decided to work from home regularly to limit my distractions. I'm more comfortable sitting in my dark basement working (didn't I just make fun of this?) than in a wide open office with lots of distractions. I'm also able to break up my day into a few 2-3 hour work sprints to keep energized. I'm a lot more productive after 8 PM than I am mid-day and I want to take advantage of that.
 </p>
 <h3>Be a Better Listener</h3>
 <p>

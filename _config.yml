@@ -1,8 +1,3 @@
-name: blog
-markdown: redcarpet
-pygments: true
 permalink: pretty
 exclude:
   - CNAME
-gems:
-  - jekyll-redirect-from

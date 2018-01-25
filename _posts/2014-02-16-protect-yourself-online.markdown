@@ -83,7 +83,7 @@ There are a lot of password managers out there that claim to be the most secure,
 recommendation of expert Troy Hunt, I use <a href="https://agilebits.com/onepassword" target="_blank">1Password</a>.
 It was a little tough swallowing the fact that I was going to have to drop some hard earned cash on it, but it has several
 great features, was highly recommended, and has mobile apps. The Windows version is a little rough at the moment but a new
-version is going to be release soon. I was told that if I bought now that I would obtain the new version when it was released,
+version is going to be released soon. I was told that if I bought now that I would obtain the new version when it was released,
 but I would urge you to contact their support and get the same assurance personally. I'm not going to go into the features
 and how I use it as their <a href="http://help.agilebits.com/1Password_Windows/index.html" target="_blank">documentation</a>
 is superb. Try their 30 day trial; you won't want to stop using it.

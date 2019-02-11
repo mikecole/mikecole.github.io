@@ -1,7 +1,7 @@
 ---
 layout: post
 title: I Did My Job
-date: 2018-07-20
+date: 2019-02-11
 tags: [Career]
 excerpt: |
   What do you do when somebody "pulls rank" on you and decides the way forward is something you deem sub-optimal? 

@@ -23,7 +23,7 @@ My main goal was to enable them to easily adopt React without necessarily having
 This is the project.json file in its entirety. You can see a few dependencies that I like to use, and a bunch of development dependencies for our build. We'll cover some of those later. Two things to note: the build scripts (one for dev and one for prod) and the <strong>-vs-binding</strong> section which instructs Visual Studio through NPM Task Runner to run the <strong>dev-build</strong> script when the project is loaded.
 </p>
 <p>
-Now we'll look at three webpack files: the dev setup, the prod setup, and the common setup that is shared with dev and prod. I'm using the <a href="https://www.npmjs.com/package/webpack-merge>webpack-merge</a> package to link them together.
+Now we'll look at three webpack files: the dev setup, the prod setup, and the common setup that is shared with dev and prod. I'm using the <a href="https://www.npmjs.com/package/webpack-merge">webpack-merge</a> package to link them together.
 </p>
 <script src="https://gist.github.com/mikecole/21a7df01287a960bebde9b6f2f7f5be0"></script>
 <p>

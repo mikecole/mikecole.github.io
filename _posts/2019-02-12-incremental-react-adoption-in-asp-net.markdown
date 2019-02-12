@@ -25,7 +25,7 @@ This is the project.json file in its entirety. You can see a few dependencies th
 <p>
 Now we'll look at three webpack files: the dev setup, the prod setup, and the common setup that is shared with dev and prod. I'm using the <a href="https://www.npmjs.com/package/webpack-merge">webpack-merge</a> package to link them together.
 </p>
-<script src="https://gist.github.com/mikecole/21a7df01287a960bebde9b6f2f7f5be0"></script>
+<script src="https://gist.github.com/mikecole/21a7df01287a960bebde9b6f2f7f5be0.js"></script>
 <p>
 The webpack.common.js file contains the base settings I want to use in both dev and prod. I have two SPAs defined: <strong>login</strong> and <strong>mass-update</strong>. It's a fairly generic webpack script other than the merging. The webpack.dev.js file merges in the webpack.common.js file, sets my development settings, and specifies to watch the content for changes which it will rebuild. The webpack.prod.js file is the production version which parses/compresses the compiles JS and sets an environment flag to <strong>production</strong> which I can test later in the project.
 </p>

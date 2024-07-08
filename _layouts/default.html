@@ -6,6 +6,14 @@
   {%- if page.meta-description -%}
   {% assign description = page.meta-description %}
   {%- endif -%}
+
+  {% assign title = page.title %}
+  {%- if page.tag -%}
+  {% assign title = 'Blog Topic: ' | append: page.tag %}
+  {%- elsif page.month -%}
+  {% assign formattedMonth = page.month | date: '%B %Y' %}
+  {% assign title = 'Blog Archive: ' | append: formattedMonth %}
+  {%- endif -%}
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="{{ description }}">
@@ -18,9 +26,9 @@
   <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="@colemike">
   <meta name="twitter:creator" content="@colemike">
-  <meta name="twitter:title" content="Mike Cole :: {{ page.title }}">
+  <meta name="twitter:title" content="{{ title }}">
   <meta name="twitter:description" content="{{ description }}">
-  <meta property="og:title" content="Mike Cole :: {{ page.title }}">
+  <meta property="og:title" content="{{ title }}">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://colemike.com{{ page.url }}">
   <meta property="og:image" content="https://colemike.com/images/thumbs-up.jpg">
@@ -31,15 +39,7 @@
   <meta name="msapplication-wide310x150logo" content="/images/tile-wide.png">
   <meta name="msapplication-square310x310logo" content="/images/tile-large.png">
   <link rel="apple-touch-icon" href="/images/thumbs-up.jpg">
-  {% assign title = page.title %}
-  {%- if page.tag -%}
-  {% assign title = 'Blog Topic: ' | append: page.tag %}
-  {%- elsif page.month -%}
-  {% assign formattedMonth = page.month | date: '%B %Y' %}
-  {% assign title = 'Blog Archive: ' | append: formattedMonth %}
-  {%- endif -%}
-  <title>{{ title }} | {{ site.title }}</title>
-
+  <title>{{ title }}</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}" media="screen" type="text/css">
@@ -72,55 +72,12 @@
           {% include nav_item.html text="About Me" url="/about" item="about" %}
           {% include nav_item.html text="Hire Me" url="https://cole-consulting.net" item="hire" %}
         </nav>
-      </div>
-      
-    </header>    
+      </div>      
+    </header>
   </div>
 
   <main class="container">
-    <div class="row g-5">
-      <div class="col-md-9">
-        {{ content }}
-        <!-- <nav class="blog-pagination" aria-label="Pagination">
-          <a class="btn btn-outline-primary rounded-pill" href="#">Older</a>
-          <a class="btn btn-outline-secondary rounded-pill disabled" aria-disabled="true">Newer</a>
-        </nav> -->
-      </div>
-
-      <div class="col-md-3">
-        <div style="top: 2rem;">
-          <div class="p-4">
-            <h4 class="fst-italic">Topics</h4>
-            {% capture tags %}
-            {% for tag in site.tags %}
-            {{ tag[1].size | plus: -10000 }}###{{ tag[0] }}###{{ tag[1].size }}
-            {% endfor %}
-            {% endcapture %}
-            {% assign sortedtags = tags | split: ' ' | sort %}
-            <ol class="list-unstyled mb-0">
-              {% for tag in sortedtags %}
-              {% assign items = tag | split: '###' %}
-              <li>
-                <a href="/tags/{{ items[1] }}">{{ items[1] }} ({{ items[2] }})</a>
-              </li>
-              {% endfor %}
-            </ol>
-          </div>
-
-          <div class="p-4">
-            <h4 class="fst-italic">Archives</h4>
-            <ol class="list-unstyled mb-0">
-              {% assign sortedmonths = site.archive | sort %}
-              {% for month in sortedmonths reversed %}
-              <li>
-                <a href="/archive/{{ month.month }}">{{ month.month | date: '%B %Y' }}</a>
-              </li>
-              {% endfor %}
-            </ol>
-          </div>
-        </div>
-      </div>
-    </div>
+    {{ content }}
   </main>
 
   <footer class="py-5 text-center text-body-secondary bg-body-tertiary">

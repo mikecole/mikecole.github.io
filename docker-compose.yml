@@ -1,0 +1,10 @@
+services:
+  gh-pages:
+    build:
+      context: https://github.com/github/pages-gem.git#v231
+      dockerfile: Dockerfile.alpine
+    command: sh -c "bundle install && jekyll serve -H 0.0.0.0 -P 4000"
+    ports:
+      - "4000:4000"
+    volumes:
+      - "./:/src/site"

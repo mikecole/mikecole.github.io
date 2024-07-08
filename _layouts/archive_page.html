@@ -1,0 +1,14 @@
+---
+layout: default
+---
+{% assign archiveDate = page.month | date: '%B %Y' %}
+<h2>Archive: {{ archiveDate }}</h2>
+<section itemscope itemtype="http://schema.org/Blog">
+    {% for post in site.posts reversed %}
+        {% assign postDate = post.date | date: '%B %Y' %}
+
+        {%- if postDate == archiveDate -%}
+            {% include post_display.html url=post.url title=post.title date=post.date tags=post.tags content=post.content %}
+        {%- endif -%}
+    {% endfor %}
+</section>

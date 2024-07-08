@@ -1,0 +1,9 @@
+{% assign active = '' %}
+{% assign item = 'blog' %}
+{%- if page.tab -%}
+{% assign item = page.tab %}
+{%- endif -%}
+{%- if item == include.item -%}
+{% assign active = ' active' %}
+{%- endif -%}
+<a class="nav-item nav-link link-body-emphasis{{ active }}" href="{{ include.url }}">{{ include.text }}</a>

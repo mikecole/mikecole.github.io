@@ -1,0 +1,14 @@
+<article class="blog-post" itemprop="blogPosts" itemscope itemtype="http://schema.org/BlogPosting">
+    <h2 class="display-5 link-body-emphasis mb-1"><a href="{{ include.url }}">{{ include.title }}</a></h2>
+    <p class="blog-post-meta">
+        <i class="me-3">{{ include.date | date: "%m/%d/%Y" }}</i>        
+        {% for tag in include.tags %}
+            <a href="/tags/{{ tag }}" class="tag-link">
+                <span class="badge text-bg-primary">{{ tag }}</span>
+            </a>
+        {% endfor %}
+    </p>
+    <p>
+        {{ include.content }}
+    </p>
+</article>

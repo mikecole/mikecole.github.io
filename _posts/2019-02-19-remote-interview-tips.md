@@ -2,9 +2,8 @@
 layout: post
 title: Remote Interview Tips
 date: 2019-02-19
-tags: [Career, Remote]
-excerpt: |
-  Slides from a mini-presentation on tips for remote interviews.
+tags: career remote-life
+meta-description: Slides from a mini-presentation for college students hightlighting tips for remote interviews.
 ---
 <p>
 I'm giving a presentation to college students in a few days on tips for remote interviews, and thought I'd share the slides. As an aside, <a href="https://slides.com">slides.com</a>

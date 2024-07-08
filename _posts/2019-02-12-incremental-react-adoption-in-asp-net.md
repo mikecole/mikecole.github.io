@@ -2,9 +2,8 @@
 layout: post
 title: Incremental React Adoption in ASP.NET
 date: 2019-02-12
-tags: [ASP.NET, React]
-excerpt: |
-  One of my clients wanted to start using React in a legacy ASP.NET WebForms application. Here's how we did it.
+tags: react asp.net
+meta-description: One of my clients wanted to start using React in a legacy ASP.NET WebForms application. Here's how we made it work.
 ---
 <p>
 In a few projects I've taken on lately, the client has stated their desire to modernize their system. In both cases we were dealing with ASP.NET WebForms applications that have been around for years. Both systems worked great and there was no justification for a rewrite, although the architectural parts of the systems left something to be desired. We wanted to minimize the creation of new WebForms code and focus on React.
@@ -18,14 +17,138 @@ I'll summarize the steps taken that are outside the scope of this post: I upgrad
 <p>
 My main goal was to enable them to easily adopt React without necessarily having to understand the complexities of npm or webpack. I wanted to automate that stuff as much as possible. Step 1 was to install the <a href="https://marketplace.visualstudio.com/items?itemName=MadsKristensen.NPMTaskRunner">NPM Task Runner</a> extension into Visual Studio. This would give us the ability to bind npm scripts to Visual Studio events. The goal was to bind our webpack dev build to run in watch mode when the project was loaded.
 </p>
-<script src="https://gist.github.com/mikecole/267ef5c5b04accb41b3b071e2128faa0.js"></script>
+```json
+{
+	"name": "the-project",
+	"version": "1.0.0",
+	"private": true,
+	"dependencies": {
+		"axios": "^0.18.0",
+		"babel-polyfill": "^6.26.0",
+		"evergreen-ui": "^4.6.0",
+		"react": "^16.4.1",
+		"react-bootstrap": "^0.32.4",
+		"react-dom": "^16.4.1"
+	},
+	"optionalDependencies": {
+		"fsevents": "*"
+	},
+	"devDependencies": {
+		"babel-core": "^6.26.3",
+		"babel-loader": "^7.1.5",
+		"babel-preset-env": "^1.7.0",
+		"babel-preset-react": "^6.24.1",
+		"babel-preset-stage-2": "^6.24.1",
+		"clean-webpack-plugin": "^0.1.19",
+		"css-loader": "^1.0.0",
+		"node-sass": "^4.9.2",
+		"sass-loader": "^7.0.3",
+		"style-loader": "^0.21.0",
+		"uglifyjs-webpack-plugin": "^1.2.7",
+		"webpack": "^4.16.1",
+		"webpack-cli": "^3.1.0",
+		"webpack-dev-server": "^3.1.5",
+		"webpack-merge": "^4.1.3"
+	},
+	"scripts": {
+		"dev-build": "webpack -d --config ./webpack.dev.js",
+		"prod-build": "webpack --config ./webpack.prod.js"
+	},
+	"babel": {
+		"presets": [
+			"env",
+			"react",
+			"stage-2"
+		]
+	},
+	"-vs-binding": {
+		"ProjectOpened": [
+			"dev-build"
+		]
+	}
+}
+```
 <p>
 This is the project.json file in its entirety. You can see a few dependencies that I like to use, and a bunch of development dependencies for our build. We'll cover some of those later. Two things to note: the build scripts (one for dev and one for prod) and the <strong>-vs-binding</strong> section which instructs Visual Studio through NPM Task Runner to run the <strong>dev-build</strong> script when the project is loaded.
 </p>
 <p>
 Now we'll look at three webpack files: the dev setup, the prod setup, and the common setup that is shared with dev and prod. I'm using the <a href="https://www.npmjs.com/package/webpack-merge">webpack-merge</a> package to link them together.
 </p>
-<script src="https://gist.github.com/mikecole/21a7df01287a960bebde9b6f2f7f5be0.js"></script>
+```javascript
+const path = require('path');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+
+module.exports = {
+    entry: {
+        login: './Scripts/apps/login.jsx',
+        'mass-update': './Scripts/apps/mass-update/app.jsx',
+    },
+    module: {
+        rules: [
+            {
+                test: /\.(js|jsx)$/,
+                exclude: /node_modules/,
+                use: ['babel-loader'],
+            },
+            {
+                test:/\.(s*)css$/,
+                use:['style-loader','css-loader', 'sass-loader'],
+            },
+        ]
+    },
+    resolve: {
+        extensions: ['*', '.js', '.jsx'],
+    },
+    output: {
+        path: path.join(__dirname, 'scripts', 'dist'),
+        publicPath: '/',
+        filename: '[name].bundle.js',
+    },
+    plugins: [
+        new CleanWebpackPlugin([path.join(__dirname, 'scripts', 'dist')]),
+    ]
+};
+```
+
+```javascript
+const merge = require('webpack-merge');
+const common = require('./webpack.common.js');
+
+module.exports = merge(common,
+{
+    mode: 'development',
+    devtool: 'inline-source-map',
+    devServer: {
+        contentBase: './Scripts/dist'
+    },
+    watch: true,
+    watchOptions: {
+        aggregateTimeout: 300,
+        poll: 1000,
+        ignored: './node_modules/'
+    }
+});
+```
+
+```javascript
+const webpack = require('webpack');
+const merge = require('webpack-merge');
+const common = require('./webpack.common.js');
+const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
+
+module.exports = merge(common, {
+    mode: 'production',
+    devtool: 'source-map',
+    plugins: [
+        new UglifyJSPlugin({
+            sourceMap: true
+        }),
+        new webpack.DefinePlugin({
+            'process.env.NODE_ENV': JSON.stringify('production')
+        })
+    ]
+});
+```
 <p>
 The webpack.common.js file contains the base settings I want to use in both dev and prod. I have two SPAs defined: <strong>login</strong> and <strong>mass-update</strong>. It's a fairly generic webpack script other than the merging. The webpack.dev.js file merges in the webpack.common.js file, sets my development settings, and specifies to watch the content for changes which it will rebuild. The webpack.prod.js file is the production version which parses/compresses the compiles JS and sets an environment flag to <strong>production</strong> which I can test later in the project.
 </p>

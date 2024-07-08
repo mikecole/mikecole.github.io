@@ -1,0 +1,64 @@
+name: Deploy Jekyll with GitHub Pages dependencies preinstalled
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
+# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # LOL
+      # This will grab all tags from all posts, split them all by newline, filters out dupes, and creates a file for each
+      - run: |
+          mkdir -p _tag
+          grep -oP '(?<=tags: ).*' ./_posts/* -h | tr ' ' '\n' | sort -u | while read line ; do echo $'---\n'tag: $line$'\n---' > _tag/$line.md ; done
+
+      # This will grab dates from all posts, convert to "Month Year", filter by distinct values, and created a collection file for each
+      - shell: pwsh
+        run: |
+          New-Item -Path . -Name "_archive" -ItemType "directory"
+          Get-Content ./_posts/* | Select-String -Pattern '(?<=date: ).*' | foreach {$_ -replace("date: ","")} | foreach {$_ | get-date -Format "yyyy-MM-01" } | Sort-Object -Unique | foreach {"---`nmonth: ${_}`n---" | Out-File -FilePath "./_archive/${_}.md" }
+     
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pre-compiled
+          path: ./
+
+      - name: Build with Jekyll
+        uses: actions/jekyll-build-pages@v1
+        with:
+          source: ./
+          destination: ./_site
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

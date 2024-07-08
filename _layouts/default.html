@@ -1,90 +1,151 @@
-﻿<!DOCTYPE html>
-<html>
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
 <head>
-    <title>Mike Cole :: {{ page.title }}</title>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="{{ page.meta-description }}">
-    <link rel="shortcut icon" href="/favicon.ico">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:site" content="@colemike">
-    <meta name="twitter:creator" content="@colemike">
-    <meta name="twitter:title" content="Mike Cole :: {{ page.title }}">
-    <meta name="twitter:description" content="{{ page.meta-description }}">
-    <meta property="og:title" content="Mike Cole :: {{ page.title }}">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://colemike.com{{ page.url }}">
-    <meta property="og:image" content="https://colemike.com/images/thumbs-up.jpg">
-    <meta name="application-name" content="Mike Cole's Blog">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-square70x70logo" content="tile-tiny.png">
-    <meta name="msapplication-square150x150logo" content="tile-square.png">
-    <meta name="msapplication-wide310x150logo" content="tile-wide.png">
-    <meta name="msapplication-square310x310logo" content="tile-large.png">
-	<link rel="apple-touch-icon" href="/images/thumbs-up.jpg">
-    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel="stylesheet" type="text/css">
-    <link rel="stylesheet" type="text/css" href="/stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="/stylesheets/pygment_trac.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="/stylesheets/print.css" media="print">
-    <link href="/mapglyphs/mapglyphs.css" rel="stylesheet">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+  {% assign description = 'Mike Cole is the principal consultant at Cole Consulting, LLC. He is also an experience conference speaker, and blogs about Microsoft, JavaScript, and other web-related technologies.' %}
+  {%- if page.meta-description -%}
+  {% assign description = page.meta-description %}
+  {%- endif -%}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="{{ description }}">
+  <meta name="author" content="Mike Cole">
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+  <meta name="robots" content="max-image-preview:large">
+  <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="/feed">
+  <meta name="description" content="{{ description }}">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@colemike">
+  <meta name="twitter:creator" content="@colemike">
+  <meta name="twitter:title" content="Mike Cole :: {{ page.title }}">
+  <meta name="twitter:description" content="{{ description }}">
+  <meta property="og:title" content="Mike Cole :: {{ page.title }}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://colemike.com{{ page.url }}">
+  <meta property="og:image" content="https://colemike.com/images/thumbs-up.jpg">
+  <meta name="application-name" content="Mike Cole's Blog">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-square70x70logo" content="/images/tile-tiny.png">
+  <meta name="msapplication-square150x150logo" content="/images/tile-square.png">
+  <meta name="msapplication-wide310x150logo" content="/images/tile-wide.png">
+  <meta name="msapplication-square310x310logo" content="/images/tile-large.png">
+  <link rel="apple-touch-icon" href="/images/thumbs-up.jpg">
+  {% assign title = page.title %}
+  {%- if page.tag -%}
+  {% assign title = 'Blog Topic: ' | append: page.tag %}
+  {%- elsif page.month -%}
+  {% assign formattedMonth = page.month | date: '%B %Y' %}
+  {% assign title = 'Blog Archive: ' | append: formattedMonth %}
+  {%- endif -%}
+  <title>{{ title }} | {{ site.title }}</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}" media="screen" type="text/css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage">
-    <header>
-        <div class="inner">
-            <h1>Mike Cole</h1>            
-            <div class="social">
-                <a href="https://github.com/mikecole" title="GitHub" class="si-icon github" target="_blank">GitHub</a>
-                <a href="https://twitter.com/colemike" title="Twitter" class="si-icon twitter" target="_blank">Twitter</a>
-                <a href="http://stackoverflow.com/users/86191/mike-cole" title="Stack Overflow" class="si-icon stackoverflow" target="_blank">Stack Overflow</a>
-                <a href="http://linkedin.com/in/colemike" title="LinkedIn" class="si-icon linkedin" target="_blank">LinkedIn</a>
-                <a href="mailto:&#99;&#111;&#108;&#101;&#46;&#109;&#105;&#107;&#101;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;" title="Email" class="si-icon email">Email</a>
-            </div>
-            <h2 role="navigation"><a href="/">Blog</a> / <a href="/about/">About Me</a> / <a href="/speaking/">Speaking</a> / <a href="https://cole-consulting.net/">Hire Me</a></h2>
+<body>
+  <div class="container">
+    <header class="h-1">
+      <div class="p-4 p-md-5 mb-2 rounded text-body-emphasis bg-body-secondary row">
+        <div class="col-lg-8 px-0">
+          <h1 class="display-4 fst-italic">{{ site.title }}</h1>
+          <p class="lead my-3">{{ site.description }}</p>
         </div>
-    </header>
+        <div class="col-lg-3 px-0 text-end">
+          <a href="https://github.com/mikecole" target="_blank" class="bi bi-github h1 me-2"></a>
+          <a href="https://x.com/colemike" target="_blank" class="bi bi-twitter-x h1 me-2"></a>
+          <a href="http://stackoverflow.com/users/86191/mike-cole" target="_blank" class="bi bi-stack-overflow h1 me-2"></a>
+          <a href="http://linkedin.com/in/colemike" target="_blank" class="bi bi-linkedin h1 me-2"></a>
+          <a href="mailto:cole.mike@gmail.com" target="_blank" class="bi bi-envelope-at h1"></a>
+          <div class="mt-3">
+            <a href="https://stackoverflow.com/users/86191/mike-cole"><img src="https://stackoverflow.com/users/flair/86191.png" width="208" height="58" alt="profile for Mike Cole at Stack Overflow, Q&amp;A for professional and enthusiast programmers" title="profile for Mike Cole at Stack Overflow, Q&amp;A for professional and enthusiast programmers"></a>
+          </div>
+        </div>
+      </div>
+      <div class="nav-scroller py-1 mb-3 border-bottom border-top">
+        <nav class="nav nav-underline">
+          {% include nav_item.html text="Blog" url="/" item="blog" %}
+          {% include nav_item.html text="About Me" url="/about" item="about" %}
+          {% include nav_item.html text="Hire Me" url="https://cole-consulting.net" item="hire" %}
+        </nav>
+      </div>
+      
+    </header>    
+  </div>
 
-    <div id="content-wrapper">
-        <div class="inner clearfix">
-            <section id="main-content" role="main">
-                {{ content }}
-            </section>
-            <aside id="sidebar">
-                <p>
-                    <a href="https://stackoverflow.com/users/86191/mike-cole"><img src="https://stackoverflow.com/users/flair/86191.png" width="208" height="58" alt="profile for Mike Cole at Stack Overflow, Q&amp;A for professional and enthusiast programmers" title="profile for Mike Cole at Stack Overflow, Q&amp;A for professional and enthusiast programmers"></a>
-                </p>
-                <p>
-                    <a href="http://feeds.feedburner.com/colemike" rel="alternate" type="application/rss+xml"><img src="//feedburner.google.com/fb/images/pub/feed-icon16x16.png" alt="" class="feedburner-icon" /></a>
-                    <a href="http://feeds.feedburner.com/colemike"><img src="https://feeds.feedburner.com/~fc/colemike?bg=99CCFF&amp;fg=444444&amp;anim=0" height="26" width="88" alt="" /></a>
-                </p>
-				<p>
-                    <form style="border:1px solid #ccc;padding:3px;text-align:center;" action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('http://feedburner.google.com/fb/a/mailverify?uri=colemike', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true">
-					    <p>Enter your email address:</p>
-                        <p><input type="text" style="width:140px" name="email"/></p>
-                        <input type="hidden" value="colemike" name="uri"/>
-                        <input type="hidden" name="loc" value="en_US"/>
-                        <input type="submit" value="Subscribe" />
-                        <p>Delivered by <a href="http://feedburner.google.com" target="_blank">FeedBurner</a></p>
-                    </form>
-				</p>
-                <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
-				<p><a href="http://mapglyphs.com/" title="Iowa" class="mg map-us-ia mg-2x"></a> powered.</p>
-			</aside>
+  <main class="container">
+    <div class="row g-5">
+      <div class="col-md-9">
+        {{ content }}
+        <!-- <nav class="blog-pagination" aria-label="Pagination">
+          <a class="btn btn-outline-primary rounded-pill" href="#">Older</a>
+          <a class="btn btn-outline-secondary rounded-pill disabled" aria-disabled="true">Newer</a>
+        </nav> -->
+      </div>
+
+      <div class="col-md-3">
+        <div style="top: 2rem;">
+          <div class="p-4">
+            <h4 class="fst-italic">Topics</h4>
+            {% capture tags %}
+            {% for tag in site.tags %}
+            {{ tag[1].size | plus: -10000 }}###{{ tag[0] }}###{{ tag[1].size }}
+            {% endfor %}
+            {% endcapture %}
+            {% assign sortedtags = tags | split: ' ' | sort %}
+            <ol class="list-unstyled mb-0">
+              {% for tag in sortedtags %}
+              {% assign items = tag | split: '###' %}
+              <li>
+                <a href="/tags/{{ items[1] }}">{{ items[1] }} ({{ items[2] }})</a>
+              </li>
+              {% endfor %}
+            </ol>
+          </div>
+
+          <div class="p-4">
+            <h4 class="fst-italic">Archives</h4>
+            <ol class="list-unstyled mb-0">
+              {% assign sortedmonths = site.archive | sort %}
+              {% for month in sortedmonths reversed %}
+              <li>
+                <a href="/archive/{{ month.month }}">{{ month.month | date: '%B %Y' }}</a>
+              </li>
+              {% endfor %}
+            </ol>
+          </div>
         </div>
+      </div>
     </div>
-	
-	<script>
-	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  </main>
+
+  <footer class="py-5 text-center text-body-secondary bg-body-tertiary">
+    <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</p>
+    <p class="mb-0">
+      <a href="#">Back to top</a>
+    </p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/powershell.min.js"></script>
+
+  <script>
+    hljs.configure({ cssSelector: 'code', languages:[] });
+    hljs.highlightAll();
+
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
 	  ga('create', 'UA-47899862-1', 'colemike.com');
 	  ga('send', 'pageview');
-	</script>
+  </script>
 </body>
+
 </html>

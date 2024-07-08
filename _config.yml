@@ -1,5 +1,33 @@
+title: Mike Cole
+description: A blog about development technologies, with a Microsoft and JavaScript tilt.
 permalink: pretty
-exclude:
-  - CNAME
+markdown: kramdown #Kramdown plays well with highlight.js
+kramdown:
+    syntax_highlighter_opts:
+      disable: true #highlight.js replaces this
 plugins:
   - jekyll-sitemap
+  - jekyll-feed
+exclude:
+  - CNAME
+
+collections:
+    tag:
+        permalink: /tags/:title
+        output: true
+    archive:
+        output: true
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "tag"
+    values:
+      layout: tag_page
+  -
+    scope:
+      path: ""
+      type: "archive"
+    values:
+      layout: archive_page

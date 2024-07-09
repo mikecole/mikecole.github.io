@@ -7,12 +7,12 @@
   {% assign description = page.meta-description %}
   {%- endif -%}
 
-  {% assign title = page.title %}
+  {% assign title = 'Mike Cole - ' | append: page.title %}
   {%- if page.tag -%}
-  {% assign title = 'Blog Topic: ' | append: page.tag %}
+  {% assign title = 'Mike Cole - Blog Topic: ' | append: page.tag %}
   {%- elsif page.month -%}
   {% assign formattedMonth = page.month | date: '%B %Y' %}
-  {% assign title = 'Blog Archive: ' | append: formattedMonth %}
+  {% assign title = 'Mike Cole - Blog Archive: ' | append: formattedMonth %}
   {%- endif -%}
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">

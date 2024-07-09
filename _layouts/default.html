@@ -105,7 +105,7 @@
 
       snippets[i].getElementsByClassName('hljs-copy')[0].addEventListener("click", function () {
           this.innerText = 'Copying...';
-          var code = this.parent.getElementsByTagName('code')[0].innerText;
+          var code = this.parentNode.getElementsByTagName('code')[0].innerText;
           navigator.clipboard.writeText(code);
           this.innerText = 'Copied!';
           button = this;

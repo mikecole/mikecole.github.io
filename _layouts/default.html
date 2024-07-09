@@ -101,7 +101,7 @@
     for (var i = 0; i < numberOfSnippets; i++) {
       snippets[i].classList.add('hljs'); // append copy button to pre tag
 
-      snippets[i].innerHTML = '<button class="hljs-copy">Copy</button>' + snippets[i].innerHTML; // append copy button
+      snippets[i].innerHTML = '<button type="button" class="btn btn-primary btn-sm hljs-copy">Copy</button>' + snippets[i].innerHTML; // append copy button
 
       snippets[i].getElementsByClassName('hljs-copy')[0].addEventListener("click", function () {
           this.innerText = 'Copying...';

@@ -96,24 +96,48 @@
     hljs.configure({ cssSelector: 'code', languages:[] });
     hljs.highlightAll();
 
+    // var snippets = document.getElementsByTagName('pre');
+    // var numberOfSnippets = snippets.length;
+    // for (var i = 0; i < numberOfSnippets; i++) {
+    //   var snippet = snippets[i];
+
+    //   snippet.classList.add('hljs'); // append copy button to pre tag
+
+    //   var language = snippet.getElementsByTagName('code')[0].classList.values().find(f => f.startsWith('language-'));
+    //   if (language) {
+    //     snippet.innerHTML = '<span class="badge text-bg-primary hljs-language">' + language.replace('language-', '') + '</span>' + snippet.innerHTML; //append language
+    //   }
+
+    //   snippet.innerHTML = '<button type="button" class="btn btn-primary btn-sm mt-1 mr-1 hljs-copy">Copy</button>' + snippet.innerHTML; // append copy button
+
+    //   snippet.getElementsByClassName('hljs-copy')[0].addEventListener("click", function () {
+    //       this.innerText = 'Copying...';
+    //       var code = this.parentNode.getElementsByTagName('code')[0].innerText;
+    //       navigator.clipboard.writeText(code);
+    //       this.innerText = 'Copied!';
+    //       button = this;
+    //       setTimeout(function () {
+    //           button.innerText = 'Copy';
+    //       }, 1000)
+    //   });
+    // }
+
     var snippets = document.getElementsByTagName('pre');
     var numberOfSnippets = snippets.length;
     for (var i = 0; i < numberOfSnippets; i++) {
-      var snippet = snippets[i];
+      code = snippets[i].getElementsByTagName('code')[0].innerText;
 
-      snippet.classList.add('hljs'); // append copy button to pre tag
+      snippets[i].classList.add('hljs'); // append copy button to pre tag
 
-      var language = snippet.getElementsByTagName('code')[0].classList.values().find(f => f.startsWith('language-'));
-      if (language) {
-        snippet.innerHTML = '<span class="badge text-bg-primary hljs-language">' + language.replace('language-', '') + '</span>' + snippet.innerHTML; //append language
-      }
+      snippets[i].innerHTML = '<button class="hljs-copy">Copy</button>' + snippets[i].innerHTML; // append copy button
 
-      snippet.innerHTML = '<button type="button" class="btn btn-primary btn-sm mt-1 mr-1 hljs-copy">Copy</button>' + snippet.innerHTML; // append copy button
-
-      snippet.getElementsByClassName('hljs-copy')[0].addEventListener("click", function () {
-          this.innerText = 'Copying...';
-          var code = this.parentNode.getElementsByTagName('code')[0].innerText;
-          navigator.clipboard.writeText(code);
+      snippets[i].getElementsByClassName('hljs-copy')[0].addEventListener("click", function () {
+          this.innerText = 'Copying..';
+          if (!navigator.userAgent.toLowerCase().includes('safari')) {
+              navigator.clipboard.writeText(code);
+          } else {
+              prompt("Clipboard (Select: ⌘+a > Copy:⌘+c)", code);
+          }
           this.innerText = 'Copied!';
           button = this;
           setTimeout(function () {

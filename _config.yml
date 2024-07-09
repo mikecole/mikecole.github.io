@@ -20,6 +20,7 @@ collections:
         output: true
     archive:
         output: true
+    speaking:
 
 defaults:
   -

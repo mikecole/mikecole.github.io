@@ -96,55 +96,67 @@
     hljs.configure({ cssSelector: 'code', languages:[] });
     hljs.highlightAll();
 
-    // var snippets = document.getElementsByTagName('pre');
-    // var numberOfSnippets = snippets.length;
-    // for (var i = 0; i < numberOfSnippets; i++) {
-    //   var snippet = snippets[i];
+    hljs.addPlugin({
+      "after:highlightElement": ({ el, text }) => {
+        /**
+         * el is the <code> element that was highlighted
+         * el.parentElement is the <pre> element
+         */
+        const wrapper = el.parentElement;
+        
+        if (wrapper == null || wrapper.tagName.toLowerCase() != "pre") {
+          return;
+        }
 
-    //   snippet.classList.add('hljs'); // append copy button to pre tag
+        /**
+         * Make the parent relative so we can absolutely
+         * position the copy button
+         */
+        wrapper.classList.add("position-relative");
 
-    //   var language = snippet.getElementsByTagName('code')[0].classList.values().find(f => f.startsWith('language-'));
-    //   if (language) {
-    //     snippet.innerHTML = '<span class="badge text-bg-primary hljs-language">' + language.replace('language-', '') + '</span>' + snippet.innerHTML; //append language
-    //   }
+        const container = document.createElement("div");
+        container.classList.add(
+          "position-absolute",
+          "top-0",
+          "end-0",
+          "mt-1",
+          "me-1",
+        );
 
-    //   snippet.innerHTML = '<button type="button" class="btn btn-primary btn-sm mt-1 mr-1 hljs-copy">Copy</button>' + snippet.innerHTML; // append copy button
+        const copyButton = document.createElement("button");
+        copyButton.classList.add(          
+          "btn",
+          "btn-secondary",
+          "btn-sm",
+          "bi",
+          "bi-clipboard"
+        );
+        
+        copyButton.onclick = () => {
+          navigator.clipboard.writeText(text);
+          copyButton.innerHTML = "Copied!";
+          setTimeout(() => {
+            copyButton.innerHTML = "";
+          }, 3000);
+        };
 
-    //   snippet.getElementsByClassName('hljs-copy')[0].addEventListener("click", function () {
-    //       this.innerText = 'Copying...';
-    //       var code = this.parentNode.getElementsByTagName('code')[0].innerText;
-    //       navigator.clipboard.writeText(code);
-    //       this.innerText = 'Copied!';
-    //       button = this;
-    //       setTimeout(function () {
-    //           button.innerText = 'Copy';
-    //       }, 1000)
-    //   });
-    // }
+        container.appendChild(copyButton);
 
-    var snippets = document.getElementsByTagName('pre');
-    var numberOfSnippets = snippets.length;
-    for (var i = 0; i < numberOfSnippets; i++) {
-      code = snippets[i].getElementsByTagName('code')[0].innerText;
+        var languageClass = el.classList.values().find(f => f.startsWith("language-"));
+        if (languageClass)
+        {
+          const languageBadge = document.createElement("div");
+          languageBadge.classList.add(
+            "badge",
+            "bg-secondary"
+          );
+          languageBadge.innerHTML = languageClass.replace("language-", "");
+          container.insertBefore(languageBadge, container.firstChild);
+        }
 
-      snippets[i].classList.add('hljs'); // append copy button to pre tag
-
-      snippets[i].innerHTML = '<button class="hljs-copy">Copy</button>' + snippets[i].innerHTML; // append copy button
-
-      snippets[i].getElementsByClassName('hljs-copy')[0].addEventListener("click", function () {
-          this.innerText = 'Copying..';
-          if (!navigator.userAgent.toLowerCase().includes('safari')) {
-              navigator.clipboard.writeText(code);
-          } else {
-              prompt("Clipboard (Select: ⌘+a > Copy:⌘+c)", code);
-          }
-          this.innerText = 'Copied!';
-          button = this;
-          setTimeout(function () {
-              button.innerText = 'Copy';
-          }, 1000)
-      });
-    }
+        wrapper.appendChild(container);
+      }
+    });
 
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}

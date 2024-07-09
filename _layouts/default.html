@@ -101,7 +101,7 @@
     for (var i = 0; i < numberOfSnippets; i++) {
       var snippet = snippets[i];
 
-      //snippets[i].classList.add('hljs'); // append copy button to pre tag
+      snippet.classList.add('hljs'); // append copy button to pre tag
 
       var language = snippet.getElementsByTagName('code')[0].classList.values().find(f => f.startsWith('language-'));
       if (language) {
@@ -110,7 +110,7 @@
 
       snippet.innerHTML = '<button type="button" class="btn btn-primary btn-sm mt-1 mr-1 hljs-copy">Copy</button>' + snippet.innerHTML; // append copy button
 
-      parent.getElementsByClassName('hljs-copy')[0].addEventListener("click", function () {
+      snippet.getElementsByClassName('hljs-copy')[0].addEventListener("click", function () {
           this.innerText = 'Copying...';
           var code = this.parentNode.getElementsByTagName('code')[0].innerText;
           navigator.clipboard.writeText(code);

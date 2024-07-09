@@ -9,7 +9,7 @@ I maintain several [Chocolatey](https://chocolatey.org/) community packages on [
 
 #TIL that you can RDP into an AppVeyor build agent to help troubleshoot issues. First you need to add the following to the `on_finish` block in your .yml file:
 
-```yml
+```
 on_finish:    
 - ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
 ```

@@ -99,14 +99,13 @@
     var snippets = document.getElementsByTagName('pre');
     var numberOfSnippets = snippets.length;
     for (var i = 0; i < numberOfSnippets; i++) {
-      code = snippets[i].getElementsByTagName('code')[0].innerText;
-
       snippets[i].classList.add('hljs'); // append copy button to pre tag
 
       snippets[i].innerHTML = '<button class="hljs-copy">Copy</button>' + snippets[i].innerHTML; // append copy button
 
       snippets[i].getElementsByClassName('hljs-copy')[0].addEventListener("click", function () {
-          this.innerText = 'Copying..';
+          this.innerText = 'Copying...';
+          var code = this.parent.getElementsByTagName('code')[0].innerText;
           navigator.clipboard.writeText(code);
           this.innerText = 'Copied!';
           button = this;

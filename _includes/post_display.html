@@ -1,7 +1,17 @@
 <article class="blog-post" itemprop="blogPosts" itemscope itemtype="http://schema.org/BlogPosting">
-    <h2 class="display-5 link-body-emphasis mb-1"><a href="{{ include.url }}">{{ include.title }}</a></h2>
+    <h2 class="display-5 link-body-emphasis mb-1">
+        {%- if include.url -%}
+        <a href="{{ include.url }}" class="title-link">{{ include.title }}</a>
+        {%- else -%}
+        {{ include.title }}
+        {%- endif -%}
+    </h2>
     <p class="blog-post-meta">
-        <i class="me-3">{{ include.date | date: "%m/%d/%Y" }}</i>        
+        <i class="me-3 bi bi-calendar"> {{ include.date | date: "%m/%d/%Y" }}</i>
+        {%- if include.url -%}
+        <i class="me-3 bi bi-chat-right-dots"> <a href="{{ include.url }}">Comment</a></i>
+        {%- endif -%}
+
         {% for tag in include.tags %}
             <a href="/tags/{{ tag }}" class="tag-link">
                 <span class="badge text-bg-primary">{{ tag }}</span>

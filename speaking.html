@@ -5,20 +5,29 @@ tab: speaking
 ---
 <h2>History</h2>
 <table class="table">
-    <thead>
-        <th scope="col">Presentation</th>
-        <th scope="col">Conference</th>
-        <th scope="col">Location</th>        
-        <th scope="col">Date</th>
-    </thead>
-    <tbody>
-    {% for talk in site.speaking reversed %}
-    <tr>
-        <td>{{ talk.title }}</td>
-        <td>{{ talk.conference }}</td>
-        <td>{{ talk.location }}</td>
-        <td>{{ talk.date | date: "%m/%d/%Y" }}</td>
-    </tr>
-    {% endfor %}
-    </tbody>
+  <thead>
+    <th scope="col">Presentation</th>
+    <th scope="col">Conference</th>
+    <th scope="col">Location</th>
+    <th scope="col">Date</th>
+    <th></th>
+  </thead>
+  <tbody>
+  {% for talk in site.speaking reversed %}
+  <tr>
+    <td class="align-middle">
+      {{ talk.title }}
+    </td>
+    <td class="align-middle">{{ talk.conference }}</td>
+    <td class="align-middle">{{ talk.location }}</td>
+    <td class="align-middle">{{ talk.date | date: "%m/%d/%Y" }}</td>
+    <td class="align-middle">
+      {%- if talk.image -%}
+      <button type="button" class="btn btn-secondary btn-sm bi bi-info-circle" data-bs-toggle="modal" data-bs-target="#{{ forloop.index }}"></button>
+      {% include speaking_image_modal.html id=forloop.index url=talk.image %}
+      {%- endif -%}
+    </td>
+  </tr>
+  {% endfor %}
+  </tbody>
 <table>

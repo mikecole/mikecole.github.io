@@ -3,45 +3,45 @@ layout: default
 ---
 
 <div class="row g-5">
-    <div class="col-md-9">
-        {{ content }}
-        <!-- <nav class="blog-pagination" aria-label="Pagination">
-        <a class="btn btn-outline-primary rounded-pill" href="#">Older</a>
-        <a class="btn btn-outline-secondary rounded-pill disabled" aria-disabled="true">Newer</a>
-        </nav> -->
-    </div>
+  <div class="col-md-9">
+    {{ content }}
+    <!-- <nav class="blog-pagination" aria-label="Pagination">
+    <a class="btn btn-outline-primary rounded-pill" href="#">Older</a>
+    <a class="btn btn-outline-secondary rounded-pill disabled" aria-disabled="true">Newer</a>
+    </nav> -->
+  </div>
 
-    <div class="col-md-3">
-        <div style="top: 2rem;">
-            <div class="p-4">
-                <h4 class="fst-italic">Topics</h4>
-                {% capture tags %}
-                {% for tag in site.tags %}
-                {{ tag[1].size | plus: -10000 }}###{{ tag[0] }}###{{ tag[1].size }}
-                {% endfor %}
-                {% endcapture %}
-                {% assign sortedtags = tags | split: ' ' | sort %}
-                <ol class="list-unstyled mb-0">
-                {% for tag in sortedtags %}
-                {% assign items = tag | split: '###' %}
-                <li>
-                    <a href="/tags/{{ items[1] }}">{{ items[1] }} ({{ items[2] }})</a>
-                </li>
-                {% endfor %}
-                </ol>
-            </div>
+  <div class="col-md-3">
+    <div style="top: 2rem;">
+      <div class="p-4">
+        <h4 class="fst-italic">Topics</h4>
+        {% capture tags %}
+        {% for tag in site.tags %}
+        {{ tag[1].size | plus: -10000 }}###{{ tag[0] }}###{{ tag[1].size }}
+        {% endfor %}
+        {% endcapture %}
+        {% assign sortedtags = tags | split: ' ' | sort %}
+        <ol class="list-unstyled mb-0">
+        {% for tag in sortedtags %}
+        {% assign items = tag | split: '###' %}
+        <li>
+            <a href="/tags/{{ items[1] }}">{{ items[1] }} ({{ items[2] }})</a>
+        </li>
+        {% endfor %}
+        </ol>
+      </div>
 
-            <div class="p-4">
-                <h4 class="fst-italic">Archives</h4>
-                <ol class="list-unstyled mb-0">
-                {% assign sortedmonths = site.archive | sort %}
-                {% for month in sortedmonths reversed %}
-                <li>
-                    <a href="/archive/{{ month.month }}">{{ month.month | date: '%B %Y' }}</a>
-                </li>
-                {% endfor %}
-                </ol>
-            </div>
-        </div>
+      <div class="p-4">
+        <h4 class="fst-italic">Archives</h4>
+        <ol class="list-unstyled mb-0">
+        {% assign sortedmonths = site.archive | sort %}
+        {% for month in sortedmonths reversed %}
+        <li>
+            <a href="/archive/{{ month.month }}">{{ month.month | date: '%B %Y' }}</a>
+        </li>
+        {% endfor %}
+        </ol>
+      </div>
     </div>
+  </div>
 </div>
